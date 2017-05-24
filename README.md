@@ -1,3 +1,5 @@
+### This package is mainly monkey patching to make it work till a more stable release of the original library is done, if ever. I would not recommend using this unless you have no other way.
+
 # Amazon Provider for OAuth 2.0 Client
 
 [![Build Status](https://img.shields.io/travis/lemonstand/oauth2-amazon.svg)](https://travis-ci.org/lemonstand/oauth2-amazon)
