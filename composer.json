@@ -1,5 +1,5 @@
 {
-    "name": "lemonstand/oauth2-amazon",
+    "name": "twisted1919/oauth2-amazon",
     "description": "Amazon OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
     "license": "MIT",
     "authors": [
@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "league/oauth2-client": "~0.10"
+        "league/oauth2-client": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.5"
