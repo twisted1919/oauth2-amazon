@@ -1,6 +1,5 @@
 <?php namespace LemonStand\OAuth2\Client\Provider;
 
-use League\OAuth2\Client\Entity\User;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Token\AccessToken;
 use Psr\Http\Message\ResponseInterface;
@@ -40,7 +39,7 @@ class Amazon extends AbstractProvider
         return isset($response->user_id) ? $response->user_id : null;
     }
 
-    public function getAuthorizationUrl($options = [])
+    public function getAuthorizationUrl(array $options = array())
     {
         $url = parent::getAuthorizationUrl($options);
 
@@ -66,7 +65,7 @@ class Amazon extends AbstractProvider
 
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        $user = new User();
+        $user = new AmazonUser();
 
         $user->exchangeArray([
             'uid'   => isset($response->user_id) ? $response->user_id : null,
