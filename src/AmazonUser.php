@@ -1,6 +1,8 @@
 <?php
 
-namespace League\OAuth2\Client\Provider;
+namespace LemonStand\OAuth2\Client\Provider;
+
+use \League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
 class AmazonUser implements ResourceOwnerInterface
 {
@@ -24,7 +26,7 @@ class AmazonUser implements ResourceOwnerInterface
      */
     public function getId()
     {
-        return $this->getField('uid');
+        return $this->getField('user_id');
     }
 
     /**
@@ -66,7 +68,7 @@ class AmazonUser implements ResourceOwnerInterface
     {
         return $this->getField('email');
     }
-    
+
     /**
      * Returns all the data obtained about the user.
      *
